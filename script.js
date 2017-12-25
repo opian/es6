@@ -1,35 +1,31 @@
 window.onload = function () {
-// Object literals Enchancements
-	var name = "Crystal";
-	var belt = "Black";
-
-	//old
-	var ninja = {
-		name: name,
-		belt: belt
+// Arrow functions
+	var ninjaGreeting = function(){
+		console.log("hiyaaaaaa!"); 
 	};
-	console.log(ninja.name);
 
+	ninjaGreeting();
 
-	//Ench
-	var ninjaEs6 = {
-		name, belt,
-		//it ll grap values from variables
+	//es6
+	var ninjaSelami = ()=> console.log('hiyaaaaaa');
+	ninjaSelami();
 
-		//old func declr.
-		chop: function (x) {
-			console.log(`You chopped the enemy ${x} times`);
-		},
-		
-		//similiar func with es6
-		hit(y){
-			console.log(`you hit the enemy ${y} times`);
-		},
-		
+	var ninjaMsg = (name, age)=> console.log(`${age} yrs old ninja ${name} says hiyaaa`);
+	ninjaMsg("kimilKimilNinja",3);
+
+	var tarkan = {
+		name: "yamtar",
+		dogra(x){
+			//var _this = this;
+			window.setInterval(()=>{
+				if (x>0) {
+					console.log(this.name + " dusmani dogradi.");
+					x--;
+				}
+			}, 1000)
+		}
 	}
-	console.log(ninjaEs6.name);
-	ninjaEs6.chop(4);
-	ninjaEs6.hit(1200);	
-	
+
+	tarkan.dogra(5);
 
 }
