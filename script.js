@@ -13,7 +13,12 @@ window.onload = function () {
 	*/
 	var items = document.getElementsByTagName('li');
 	console.log(items);
-	for (var i = 0; i < items.length; i++) {
-		console.log(items[i]);
+	for (let i = 0; i < items.length; i++) {
+		items[i].onclick = function(){
+			console.log(i);
+			//i degiskeni var keywrd ile tanimlandiginda 
+			//dingu en bastan kuruldugu icin ekrAna
+			//hep 4 yaziyur.
+		}
 	}
 }
