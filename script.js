@@ -1,31 +1,32 @@
 window.onload = function () {
-// Arrow functions
-	var ninjaGreeting = function(){
-		console.log("hiyaaaaaa!"); 
-	};
+	//Sets
+	var names = new Set();
+	names.add('Yamtar');
+	console.log(names);
+	names.add('Frodo baggins').add('Sauron').add('Aragorn').add('Sauron');
+	//values must be uniq. So sauron ll not be in the output
+	console.log(names);
+	console.log('---Size');
+	console.log(names.size);
+	console.log('---Delete');
+	sonuc = names.delete('Aragorn');
+	//sonuc bool 
+	console.log(names);
+	console.log(sonuc);
+	console.log("--Clear");
+	names.clear();
+	console.log(names);
+	names.add('galadriel').add('arwen').add('balrog');
+	console.log('--has');
+	console.log(names.has('arwen'));//true
 
-	ninjaGreeting();
+///////////////////////
 
-	//es6
-	var ninjaSelami = ()=> console.log('hiyaaaaaa');
-	ninjaSelami();
-
-	var ninjaMsg = (name, age)=> console.log(`${age} yrs old ninja ${name} says hiyaaa`);
-	ninjaMsg("kimilKimilNinja",3);
-
-	var tarkan = {
-		name: "yamtar",
-		dogra(x){
-			//var _this = this;
-			window.setInterval(()=>{
-				if (x>0) {
-					console.log(this.name + " dusmani dogradi.");
-					x--;
-				}
-			}, 1000)
-		}
-	}
-
-	tarkan.dogra(5);
+	var places = ['isengard', 'anduin', 'pelennor', 'rivendell','isengard','anduin'];//tekrarlar var
+	var setPlaces = new Set(places); // repetitions ll gonna fly away.
+	console.log(places);
+	console.log(setPlaces);	
+	places = [...setPlaces];
+	console.log(places);
 
 }
