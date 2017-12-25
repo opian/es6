@@ -1,4 +1,5 @@
 window.onload = function () {
+	/*
 	var x = 10;
 	var y = 20;
 	if (x > 5) {
@@ -9,4 +10,10 @@ window.onload = function () {
 	}
 	console.log('x outside: ' + x);
 	console.log('y outside: ' + y);
+	*/
+	var items = document.getElementsByTagName('li');
+	console.log(items);
+	for (var i = 0; i < items.length; i++) {
+		console.log(items[i]);
+	}
 }
