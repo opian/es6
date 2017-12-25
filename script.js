@@ -1,19 +1,35 @@
 window.onload = function () {
-// New String Methods
-	//repeat
-	//startsWith
-	//endsWith
-	//includes 
-	var mesaj = `Lorem impsum dolor sit amed`;
-	console.log( mesaj.repeat(5));
-	console.log(mesaj.startsWith('Lore'));
-	console.log('startsWith baslangicNoktasi');
-	console.log(mesaj.startsWith('sum',9));
-	console.log('endsWith')
-	console.log(mesaj.endsWith('amed'));
-	console.log('endsWith bitisNoktasi')
-	console.log(mesaj.endsWith('sit', mesaj.length-5));
-	console.log('include')
-	console.log(mesaj.includes('impsum'));
+// Object literals Enchancements
+	var name = "Crystal";
+	var belt = "Black";
+
+	//old
+	var ninja = {
+		name: name,
+		belt: belt
+	};
+	console.log(ninja.name);
+
+
+	//Ench
+	var ninjaEs6 = {
+		name, belt,
+		//it ll grap values from variables
+
+		//old func declr.
+		chop: function (x) {
+			console.log(`You chopped the enemy ${x} times`);
+		},
+		
+		//similiar func with es6
+		hit(y){
+			console.log(`you hit the enemy ${y} times`);
+		},
+		
+	}
+	console.log(ninjaEs6.name);
+	ninjaEs6.chop(4);
+	ninjaEs6.hit(1200);	
+	
 
 }
