@@ -1,32 +1,43 @@
 window.onload = function () {
-	//Sets
-	var names = new Set();
-	names.add('Yamtar');
-	console.log(names);
-	names.add('Frodo baggins').add('Sauron').add('Aragorn').add('Sauron');
-	//values must be uniq. So sauron ll not be in the output
-	console.log(names);
-	console.log('---Size');
-	console.log(names.size);
-	console.log('---Delete');
-	sonuc = names.delete('Aragorn');
-	//sonuc bool 
-	console.log(names);
-	console.log(sonuc);
-	console.log("--Clear");
-	names.clear();
-	console.log(names);
-	names.add('galadriel').add('arwen').add('balrog');
-	console.log('--has');
-	console.log(names.has('arwen'));//true
+//Generators
+function* gen(){
+	var x = yield 'peaR';
+	var y = yield 'banaNa';
+	var z = yield 'appLe';
+	return x + y + z ;
+}
+var myGen = gen();
+console.log(myGen.next());
+console.log(myGen.next(10));
+console.log(myGen.next(20));
+console.log(myGen.next(30));
 
-///////////////////////
+/*02
+function* gen(){
+	yield 'peaR';
+	yield 'banaNa';
+	yield 'appLe';
+	return "all done";
+}
+var myGen = gen();
+console.log(myGen.next());
+console.log(myGen.next());
+console.log(myGen.next());
+console.log(myGen.next());
+*/
 
-	var places = ['isengard', 'anduin', 'pelennor', 'rivendell','isengard','anduin'];//tekrarlar var
-	var setPlaces = new Set(places); // repetitions ll gonna fly away.
-	console.log(places);
-	console.log(setPlaces);	
-	places = [...setPlaces];
-	console.log(places);
+/* 01
+function* gen(){
+	yield console.log('peaR');
+	yield console.log('banaNa');
+	yield console.log('appLe');
+	console.log("all done")
+}
+var myGen = gen();
+myGen.next();
+myGen.next();
+myGen.next();
+myGen.next();
+*/
 
 }
